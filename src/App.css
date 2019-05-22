@@ -2,32 +2,32 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+/* DASHBOARD SECTION */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* COIN CARD SECTION  */
+
+/* COIN DETAILS SECTION  */
+
+.buys {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  border-bottom: 2px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.market {
+  margin: 0 auto;
+  width: 80%;
+  height: 33vh;
+  overflow-y: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quantity,
+.price,
+.type {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.price span {
+  color: limegreen;
 }
