@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
+import "./reset.css";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      CRYPTO
+      <h3>Seed Cx API</h3>
       <Dashboard />
     </div>
   );

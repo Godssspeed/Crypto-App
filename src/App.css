@@ -1,15 +1,42 @@
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  /* background: rgb(40, 44, 52); */
 }
-
+.App h3 {
+  text-align: right;
+  padding-top: 2rem;
+  margin-right: 2rem;
+}
 /* DASHBOARD SECTION */
-
+.dashboard {
+}
 /* COIN CARD SECTION  */
 
+.card {
+  margin-top: 2rem;
+}
+
+.card h2 {
+  letter-spacing: 0.5rem;
+}
+
+.coin-title {
+  margin-bottom: 1rem;
+}
+
+.coin-title h2 {
+  font-weight: 700;
+}
+.coin-title p {
+  font-weight: 300;
+  font-style: italic;
+}
 /* COIN DETAILS SECTION  */
 
 .buys {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   border-bottom: 2px solid black;
 }
@@ -21,9 +48,14 @@
   overflow-y: scroll;
 }
 
+.buys:nth-child(even) {
+  background: rgba(219, 237, 254, 0.7);
+}
+
 .quantity,
 .price,
-.type {
+.type,
+.time {
   padding: 0.5rem;
   font-size: 1rem;
 }

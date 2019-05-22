@@ -27,6 +27,23 @@ export class CoinCard extends Component {
       });
   }
 
+  getMarket = () => {
+    const { instrumentCode } = this.props;
+    console.log(instrumentCode);
+
+    const codeFix = instrumentCode.split("/");
+    codeFix.splice(1, 0, "%2F");
+    const fix = codeFix.join("");
+    //ERROR WITH THE API DOCS NEEDED SNIPPET FOR GET REQUEST
+    console.log(fix);
+
+    axios
+      .get(`https://api.seedcx.com/instruments/${fix}/time_and_sales`)
+      .then(res => {
+        this.setState({ market: res.data.message });
+      });
+  };
+
   render() {
     const { name, abbreviation } = this.props;
     const { market } = this.state;
@@ -34,9 +51,11 @@ export class CoinCard extends Component {
     console.log(this.props);
 
     return (
-      <div>
-        <h2>{abbreviation}</h2>
-        <p>{name}</p>
+      <div className="card">
+        <div className="coin-title">
+          <h2>{abbreviation}</h2>
+          <p>( {name} )</p>
+        </div>
         <CoinDetails market={this.state.market} />
       </div>
     );

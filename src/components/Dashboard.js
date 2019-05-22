@@ -11,8 +11,8 @@ export class Dashboard extends Component {
   }
 
   componentDidMount() {
-    axios.get("api/getinstruments").then(res => {
-      this.setState({ db: res.data });
+    axios.get("https://api.seedcx.com/instruments").then(res => {
+      this.setState({ db: res.data.message });
     });
   }
 
@@ -30,7 +30,7 @@ export class Dashboard extends Component {
         />
       );
     });
-    return <div>{coinMap}</div>;
+    return <div className="dashboard">{coinMap}</div>;
   }
 }
 
